@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const course_shcema = new mongoose.Schema({
-    title : String,
+    title : {type:String, unique:true},
     author : String,
     tags : [String],
     price : Number,
